@@ -25,7 +25,7 @@ const songs = [
     {
         name: 'image-3',
         displayName: 'Peaky Blinder',
-        artist: 'RPeaky Blinder'
+        artist: 'Peaky Blinder'
     },
     {
         name: 'image-4',
