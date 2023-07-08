@@ -1,0 +1,48 @@
+<!-- Raj Satyammm -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <div class="player-container">
+            <!-- song -->
+            <div class="image-container">
+                <img src="./images/image-2.jpg" alt="">
+            </div>
+            <h2 id="title">Electric chill Machine</h2>
+            <h3 id="artist">Binod</h3>
+            <audio src="./music/image-1.mp3"></audio>
+
+            <!-- progress -->
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="duration-wrapper">
+                    <span id="current-time"></span>
+                    <span id="duration"></span>
+                </div>
+            </div>
+
+            <!-- controls -->
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
