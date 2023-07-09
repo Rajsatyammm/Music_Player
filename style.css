@@ -86,10 +86,13 @@ h3 {
     top: -15px;
     left: 120px;
     width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fas {
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(129, 129, 129);
     margin-right: 30px;
     user-select: none;
@@ -120,5 +123,13 @@ h3 {
 
     h3 {
         font-family: 15px;
+    }
+
+    .player-controls {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-right: 2.7rem;
     }
 }
