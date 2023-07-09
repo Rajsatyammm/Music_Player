@@ -9,6 +9,16 @@ const progressContainer = document.querySelector('.progress-container');
 const progress = document.querySelector('#progress');
 const currTimeEL = document.querySelector('#current-time');
 const durationEl = document.querySelector('#duration');
+const plusBtn = document.querySelector('#plus-button');
+const minusBtn = document.querySelector('#minus-button');
+
+
+// initial values
+// cheak is playing or not
+let isPlaying = false;
+
+//initial Volume
+music.volume = 0.6;
 
 // Music
 const songs = [
@@ -34,8 +44,6 @@ const songs = [
     }
 ]
 
-// cheak is playing or not
-let isPlaying = false;
 
 // play
 function playSong() {
@@ -115,7 +123,7 @@ function updateProgressBar(e) {
         // Calculate display for current-time
         let currElapseMinutes = Math.floor(currentTime / 60);
         let currElapseSeconds = Math.floor(currentTime % 60);
-        if(currElapseSeconds < 10) {
+        if (currElapseSeconds < 10) {
             currElapseSeconds = `0${currElapseSeconds}`;
         }
         // console.log('currElapseSecond', currElapseSeconds);
@@ -135,9 +143,36 @@ function setProgressBar(e) {
     music.currentTime = (clickX / width) * duration;
 }
 
+// handling Volume
+function plusVolume() {
+    // console.log('click hua bro');
+    let currVol = music.volume;
+    console.log(currVol);
+    if (currVol < 1) {
+        music.volume = (currVol + 0.1);
+    } else {
+        return;
+    }
+
+}
+
+function minusVolume() {
+    // console.log('click hua bro');
+    let currVol = music.volume;
+    console.log(currVol);
+    if (currVol > 0) {
+        music.volume = (currVol - 0.1);
+
+    } else {
+        return;
+    }
+}
+
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 music.addEventListener('ended', nextSong);
 progressContainer.addEventListener('click', setProgressBar);
+plusBtn.addEventListener('click', plusVolume);
+minusBtn.addEventListener('click', minusVolume);
